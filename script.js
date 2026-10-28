@@ -1,5 +1,5 @@
 // Paste your deployed Google Apps Script Web App URL here after setup.
-const GOOGLE_SCRIPT_URL = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzHa36hLwIlTsQkA54_xB-ejnwSg0jB--zEFtEPdfJBS3hLV_aE-hd2iJ8TOdLoQ0oERQ/exec";
 
 const menuToggle = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");
