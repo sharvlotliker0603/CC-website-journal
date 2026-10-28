@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b0d12" />
+  <meta name="description" content="A dark, modern blog for ideas, stories, and curious minds." />
+  <title>NOIR — Stories for the curious</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: { ink: '#0b0d12', panel: '#12151d', line: '#262b36', muted: '#9aa3b2', lime: '#c5f467' },
+        fontFamily: { sans: ['DM Sans', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'] },
+        boxShadow: { glow: '0 0 45px rgba(197,244,103,.12)' }
+      }}
+    }
+  </script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-ink text-white font-sans antialiased">
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="site-header">
+    <nav class="nav-wrap" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Noir home"><span class="brand-mark">N</span> NOIR<span class="brand-dot">.</span></a>
+      <button id="menuToggle" class="menu-toggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle menu"><span></span><span></span></button>
+      <div id="navLinks" class="nav-links">
+        <a href="#stories">Stories</a><a href="#about">About</a><a href="#subscribe">Join the list</a>
+        <a class="nav-cta" href="#submit">Share a story <span>↗</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero section-wrap">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot"></span> A journal for curious minds</div>
+        <h1>Ideas worth<br><span class="gradient-text">staying up for.</span></h1>
+        <p class="hero-lede">Thoughtful stories on creativity, technology, culture, and the little things that make life interesting.</p>
+        <div class="hero-actions"><a href="#stories" class="button button-primary">Explore stories <span>↓</span></a><a href="#submit" class="text-link">Have something to say? <span>↗</span></a></div>
+        <div class="hero-meta"><div class="avatar-stack"><span>J</span><span>A</span><span>M</span></div><p><strong>Fresh perspectives.</strong><br>Written by people, for people.</p></div>
+      </div>
+      <a class="feature-card" href="#stories" aria-label="Read the featured story">
+        <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=85" alt="Starry night sky over a mountain range" />
+        <div class="feature-shade"></div>
+        <div class="feature-top"><span class="pill">EDITOR'S PICK</span><span class="feature-arrow">↗</span></div>
+        <div class="feature-bottom"><span class="category">CULTURE · 6 MIN READ</span><h2>The quiet art of<br>paying attention</h2><p>Why noticing more might be the most radical thing we do.</p><div class="author-row"><span class="author-avatar">AM</span><span>Alex Morgan <small>Oct 24, 2026</small></span></div></div>
+      </a>
+    </section>
+
+    <section id="stories" class="section-wrap stories-section">
+      <div class="section-heading"><div><p class="eyebrow">THE LATEST</p><h2>Stories to get lost in<span class="brand-dot">.</span></h2></div><a href="#submit" class="text-link desktop-link">Write for NOIR <span>↗</span></a></div>
+      <div class="filter-row" role="group" aria-label="Filter stories">
+        <button class="filter-chip active" data-filter="all">All stories <span>06</span></button>
+        <button class="filter-chip" data-filter="design">Design</button>
+        <button class="filter-chip" data-filter="technology">Technology</button>
+        <button class="filter-chip" data-filter="culture">Culture</button>
+        <button class="filter-chip" data-filter="life">Life</button>
+      </div>
+      <div id="storyGrid" class="story-grid">
+        <article class="story-card" data-category="design"><a href="#submit" class="story-image"><img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=900&q=80" alt="Minimal desk with notebook and coffee" loading="lazy"><span class="image-tag">DESIGN</span></a><div class="story-content"><p class="story-meta">OCT 22, 2026 <span>·</span> 4 MIN READ</p><h3><a href="#submit">Make room for a little less</a></h3><p class="story-excerpt">A calmer space can create room for clearer thinking, better work, and new ideas.</p><div class="story-footer"><span class="mini-author">SK</span><span>Sam Kim</span><span class="read-arrow">↗</span></div></div></article>
+        <article class="story-card" data-category="technology"><a href="#submit" class="story-image"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80" alt="Circuit board with electronic components" loading="lazy"><span class="image-tag">TECHNOLOGY</span></a><div class="story-content"><p class="story-meta">OCT 20, 2026 <span>·</span> 7 MIN READ</p><h3><a href="#submit">Technology should feel human</a></h3><p class="story-excerpt">The best tools don't ask for attention. They give us more space to do meaningful things.</p><div class="story-footer"><span class="mini-author">JR</span><span>Jamie Reed</span><span class="read-arrow">↗</span></div></div></article>
+        <article class="story-card" data-category="culture"><a href="#submit" class="story-image"><img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=900&q=80" alt="Crowd enjoying a concert under stage lights" loading="lazy"><span class="image-tag">CULTURE</span></a><div class="story-content"><p class="story-meta">OCT 18, 2026 <span>·</span> 5 MIN READ</p><h3><a href="#submit">The things that bring us together</a></h3><p class="story-excerpt">From tiny rituals to loud rooms, connection often begins with a shared moment.</p><div class="story-footer"><span class="mini-author">TL</span><span>Taylor Lane</span><span class="read-arrow">↗</span></div></div></article>
+        <article class="story-card" data-category="life"><a href="#submit" class="story-image"><img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=80" alt="Sunlight falling through a green forest" loading="lazy"><span class="image-tag">LIFE</span></a><div class="story-content"><p class="story-meta">OCT 16, 2026 <span>·</span> 3 MIN READ</p><h3><a href="#submit">A slower way to move forward</a></h3><p class="story-excerpt">Progress doesn't always look like speed. Sometimes it looks like being present.</p><div class="story-footer"><span class="mini-author">NP</span><span>Noah Park</span><span class="read-arrow">↗</span></div></div></article>
+        <article class="story-card" data-category="design"><a href="#submit" class="story-image"><img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=900&q=80" alt="Creative workspace with laptop and notes" loading="lazy"><span class="image-tag">DESIGN</span></a><div class="story-content"><p class="story-meta">OCT 14, 2026 <span>·</span> 6 MIN READ</p><h3><a href="#submit">Start before you're ready</a></h3><p class="story-excerpt">A practical reminder that imperfect first steps are still steps worth taking.</p><div class="story-footer"><span class="mini-author">EC</span><span>Em Casey</span><span class="read-arrow">↗</span></div></div></article>
+        <article class="story-card" data-category="technology"><a href="#submit" class="story-image"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="Laptop and digital workspace" loading="lazy"><span class="image-tag">TECHNOLOGY</span></a><div class="story-content"><p class="story-meta">OCT 12, 2026 <span>·</span> 8 MIN READ</p><h3><a href="#submit">A healthier relationship with your screen</a></h3><p class="story-excerpt">Small boundaries that help make our digital lives feel a little more intentional.</p><div class="story-footer"><span class="mini-author">RK</span><span>Riley Khan</span><span class="read-arrow">↗</span></div></div></article>
+      </div>
+      <p id="emptyFilter" class="empty-filter" hidden>No stories in this category yet. Check back soon.</p>
+    </section>
+
+    <section id="about" class="manifesto-section">
+      <div class="section-wrap manifesto-inner"><div class="manifesto-symbol">✳</div><div><p class="eyebrow">WHY NOIR EXISTS</p><h2>The internet is loud.<br><span class="muted-text">Let's make something meaningful.</span></h2><p>NOIR is an independent corner of the internet for useful ideas, honest perspectives, and stories that stay with you after the tab is closed.</p></div><a href="#submit" class="button button-outline">Be part of it <span>↗</span></a></div>
+    </section>
+
+    <section id="submit" class="section-wrap submit-section">
+      <div class="submit-intro"><p class="eyebrow"><span class="live-dot"></span> YOUR TURN</p><h2>Every good story<br>starts <span class="gradient-text">somewhere.</span></h2><p>Have an idea, a lesson, or a perspective worth sharing? Send it our way. Our team will review your submission and get in touch.</p><div class="submission-note"><span class="note-icon">✦</span><span><strong>Made by the community.</strong><br>Real voices. Fresh perspectives. No noise.</span></div></div>
+      <div class="form-panel">
+        <div class="form-header"><div><p class="eyebrow">STORY SUBMISSION</p><h3>Tell us what you're thinking.</h3></div><span class="form-step">01 / 01</span></div>
+        <form id="storyForm">
+          <div class="form-grid">
+            <label>Full name <span>*</span><input name="name" type="text" placeholder="Your name" autocomplete="name" required maxlength="100"></label>
+            <label>Email address <span>*</span><input name="email" type="email" placeholder="you@example.com" autocomplete="email" required maxlength="150"></label>
+            <label>Story title <span>*</span><input name="title" type="text" placeholder="Give your idea a title" required maxlength="180"></label>
+            <label>Category <span>*</span><select name="category" required><option value="" disabled selected>Choose a category</option><option>Design</option><option>Technology</option><option>Culture</option><option>Life</option><option>Other</option></select></label>
+            <label class="full-field">Short description <span>*</span><textarea name="description" rows="5" placeholder="What's your story about? Give us the short version..." required maxlength="3000"></textarea><small class="field-hint">Up to 3,000 characters. Keep it clear and authentic.</small></label>
+            <label class="full-field">Portfolio or reference link <small>(optional)</small><input name="link" type="url" placeholder="https://"></label>
+          </div>
+          <label class="consent-check"><input type="checkbox" name="consent" required><span>I confirm this is my work and agree to be contacted about this submission.</span></label>
+          <button id="submitButton" type="submit" class="button button-primary submit-button"><span class="button-label">Send your story</span><span class="button-icon">↗</span></button>
+          <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+          <p class="privacy-note">Your details are used to review this submission. Please don't include sensitive personal information.</p>
+        </form>
+      </div>
+    </section>
+
+    <section id="subscribe" class="section-wrap newsletter-section"><div><p class="eyebrow">THE NOIR LETTER</p><h2>Good reads. <span class="muted-text">Occasionally.</span></h2><p>A little inspiration in your inbox. No spam, ever.</p></div><a href="#submit" class="button button-outline">Share your email in the form <span>↗</span></a></section>
+  </main>
+  <footer class="footer"><div class="section-wrap footer-inner"><a class="brand" href="#home"><span class="brand-mark">N</span> NOIR<span class="brand-dot">.</span></a><p>Independent stories for curious minds.</p><span>© 2026 NOIR Journal</span></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
